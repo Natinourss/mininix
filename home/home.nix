@@ -5,6 +5,12 @@
   imports = [
     ./programs/git.nix
     ./programs/zsh.nix
+    ./programs/kitty.nix
+  ];
+
+  home.packages = with pkgs; [
+    maple-mono
+    nerd-fonts.jetbrains-mono
   ];
 
   home.username = "natinix";
