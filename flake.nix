@@ -20,10 +20,14 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-
-   outputs = input@{ self, nixpkgs, home-manager, catppuccin, ... }:
+   outputs = { self, nixpkgs, home-manager, catppuccin, ... }@inputs:
    let
      system = "x86_64-linux";
    in {
@@ -54,7 +58,7 @@
          home-manager.backupFileExtension = "hm-bak";
 
          # Ensure HM modules can access flake inputs
-         home-manager.extraSpecialArgs = {inherit system catppuccin;};
+         home-manager.extraSpecialArgs = {inherit inputs system catppuccin;};
 
          # Import home/home.nix
          home-manager.users.natinix = {

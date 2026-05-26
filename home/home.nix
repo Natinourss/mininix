@@ -1,5 +1,5 @@
 #home.nix
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -7,6 +7,9 @@
     ./programs/zsh.nix
     ./programs/kitty.nix
     ./programs/starship.nix
+
+    inputs.nixvim.homeManagerModules.nixvim
+    ./programs/nixvim.nix
   ];
 
   home.packages = with pkgs; [
