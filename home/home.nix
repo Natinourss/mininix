@@ -9,7 +9,6 @@
   ];
 
   home.packages = with pkgs; [
-    maple-mono
     nerd-fonts.jetbrains-mono
   ];
 

@@ -9,10 +9,10 @@
       term = "xterm-256color";
 
       # font
-      font_family = "Maple Mono NF";
+      font_family = "JetBrainsMono Nerd Font";
       font_size = 12;
 
-      # transparence ✅
+      # transparence
       background_opacity = "0.85";
 
       # padding (important pour le style)
