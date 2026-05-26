@@ -27,5 +27,10 @@
   programs.zoxide.enable = true;
   programs.fzf.enable = true;
 
+  programs.fzf.defaultOptions = [
+    "--height 40%"
+    "--border"
+  ];
+
   home.stateVersion = "25.11";
 }
