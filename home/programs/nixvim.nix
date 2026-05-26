@@ -94,7 +94,7 @@
 
       # utils
       comment.enable = true;
-      surround.enable = true;
+      vim-surround.enable = true;
 
       # terminal intégré
       toggleterm = {
