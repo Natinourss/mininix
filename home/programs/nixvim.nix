@@ -17,6 +17,8 @@
       tabstop = 2;
       expandtab = true;
       clipboard = "unnamedplus";
+
+      conceallevel = 1;
     };
 
     clipboard.providers.xclip.enable = true;
