@@ -19,8 +19,11 @@
       clipboard = "unnamedplus";
 
       conceallevel = 2;
-      concealcurcor = "nc";
     };
+
+    extraConfigLua = ''
+      vim.opt.concealcursor = "nc"
+    '';
 
     clipboard.providers.xclip.enable = true;
 
