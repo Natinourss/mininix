@@ -16,5 +16,11 @@
   home.username = "natinix";
   home.homeDirectory = "/home/natinix";
 
+  catppuccin = {
+    enable = true;
+    flavor = "mocha";
+  };
+
+
   home.stateVersion = "25.11";
 }

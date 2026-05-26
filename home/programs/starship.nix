@@ -17,7 +17,7 @@
 
       directory = {
         style = "bold lavender";
-        truncation_length = 3;
+        truncation_length = 2;
       };
 
       git_branch = {
@@ -29,6 +29,10 @@
       git_status = {
         style = "red";
         format = "([$all_status$ahead_behind]($style) )";
+        conflicted = "⚔️ ";
+        ahead = "⇡";
+        behind = "⇣";
+        diverged = "⇕";
       };
 
       nix_shell = {

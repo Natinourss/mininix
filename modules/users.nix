@@ -6,6 +6,7 @@
     isNormalUser = true;
     description = "natinix";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = with pkgs; [];
   };
 }

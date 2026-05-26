@@ -49,15 +49,20 @@
      # Integrate Home Manager as a NixOS module
      home-manager.nixosModules.home-manager
        {
-       home-manager.useGlobalPkgs = true;
-       home-manager.useUserPackages = true;
-       home-manager.backupFileExtension = "hm-bak";
+         home-manager.useGlobalPkgs = true;
+         home-manager.useUserPackages = true;
+         home-manager.backupFileExtension = "hm-bak";
 
-       # Ensure HM modules can access flake inputs
-       home-manager.extraSpecialArgs = {inherit system catppuccin;};
+         # Ensure HM modules can access flake inputs
+         home-manager.extraSpecialArgs = {inherit system catppuccin;};
 
-       # Import home/home.nix
-       home-manager.users.natinix = import ./home/home.nix;
+         # Import home/home.nix
+         home-manager.users.natinix = {
+           imports = [
+             ./home/home.nix
+             catppuccin.homeModules.default
+            ];
+          };
         }
       ];
     };
