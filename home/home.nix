@@ -11,6 +11,9 @@
 
   home.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
+    zoxide
+    fzf
+    lazygit
   ];
 
   home.username = "natinix";
@@ -21,6 +24,8 @@
     flavor = "mocha";
   };
 
+  programs.zoxide.enable = true;
+  programs.fzf.enable = true;
 
   home.stateVersion = "25.11";
 }

@@ -14,10 +14,12 @@
       ls = "eza";
       cat = "bat";
       grep = "rg";
+      g = "lazygit";
     };
 
     initContent = ''
       eval "$(starship init zsh)"
+      eval "$(zoxide init zsh)"
     '';
   };
 
