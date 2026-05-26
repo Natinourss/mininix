@@ -29,7 +29,7 @@
     };
 
     # theme officiel catppuccin mocha
-    theme = "Catppuccin-Mocha";
+    themeFile = "Catppuccin-Mocha";
   };
 
   # theme kitty catppuccin (obligatoire)
