@@ -8,7 +8,7 @@
     ./programs/kitty.nix
     ./programs/starship.nix
 
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix
   ];
 
