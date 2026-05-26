@@ -18,7 +18,8 @@
       expandtab = true;
       clipboard = "unnamedplus";
 
-      conceallevel = 1;
+      conceallevel = 2;
+      concealcurcor = "nc";
     };
 
     clipboard.providers.xclip.enable = true;
@@ -54,6 +55,9 @@
       # navigation
       nvim-tree.enable = true;
       telescope.enable = true;
+
+      # markdown-preview
+      markdown-preview.enable = true;
 
       # syntax
       treesitter = {
@@ -129,9 +133,23 @@
           daily_notes = {
             folder = "daily";
           };
+
+          ui = {
+            enable = true;
+          };
+
+          mappings = {
+            gf = {
+              action = "gf_passthrough";
+              opts = {
+                noremap = false;
+                expr = true;
+                buffer = true;
+              };
+            };
+          };
         };
       };
     };
   };
 }
-
