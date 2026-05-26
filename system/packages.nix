@@ -9,5 +9,7 @@
     git
     tldr
     tree
+    cmatrix
+    cbonsai
   ];
 }
