@@ -6,6 +6,7 @@
     ./programs/git.nix
     ./programs/zsh.nix
     ./programs/kitty.nix
+    ./programs/starship.nix
   ];
 
   home.packages = with pkgs; [

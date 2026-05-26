@@ -1,3 +1,4 @@
+#kitty.nix
 { pkgs, ... }:
 
 {
