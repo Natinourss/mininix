@@ -17,6 +17,7 @@
       tabstop = 2;
       expandtab = true;
       clipboard = "unnamedplus";
+      termguicolors = true;
 
       conceallevel = 2;
     };

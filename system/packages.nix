@@ -9,5 +9,8 @@
     tree
     cmatrix
     cbonsai
+    file
+    ffmpeg
+    imagemagick
   ];
 }

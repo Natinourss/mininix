@@ -7,14 +7,10 @@
 
     settings = {
       logo = {
-        type = "file";
-        source = "${config.home.homeDirectory}/.config/fastfetch/nixos.webp";
+        type = "kitty";
+        source = "${config.home.homeDirectory}/.config/fastfetch/nixos.png";
 
-        width = 28;
-
-        image = {
-          type = "kitty";
-        };
+        width = 32;
       };
 
       display = {
@@ -25,7 +21,6 @@
       modules = [
         {
           type = "title";
-          format = "{user}@{host}";
           color = "magenta";
         }
 
@@ -99,5 +94,5 @@
     };
   };
 
-  xdg.configFile."fastfetch/nixos.webp".source = ./assets/nixos.webp;
+  xdg.configFile."fastfetch/nixos.png".source = ./assets/nixos.png;
 }

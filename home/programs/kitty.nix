@@ -7,7 +7,7 @@
 
     settings = {
       # terminal
-      term = "xterm-256color";
+      term = "xterm-kitty";  #"xterm-256color";
 
       # font
       font_family = "JetBrainsMono Nerd Font";
