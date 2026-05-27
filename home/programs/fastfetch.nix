@@ -15,23 +15,81 @@
       };
 
       display = {
-        separator = " ➜ ";
+        separator = "  ";
+        color = "blue";
       };
 
       modules = [
-        "title"
+        {
+          type = "title";
+          color = "mauve";
+        }
         "separator"
-        "os"
-        "kernel"
-        "uptime"
-        "packages"
-        "shell"
-        "wm"
-        "terminal"
-        "cpu"
-        "gpu"
-        "memory"
-        "disk"
+
+        {
+          type = "os";
+          key = "󰣇 OS";
+          color = "blue";
+        }
+        {
+          type = "kernel";
+          key = " Kernel";
+          color = "yellow";
+        }
+        {
+          type = "uptime";
+          key = "󰅐 Uptime";
+          color = "green";
+        }
+        {
+          type = "packages";
+          key = "󰏖 Packages";
+          color = "teal";
+        }
+
+        "break"
+
+        {
+          type = "shell";
+          key = " Shell";
+          color = "mauve";
+        }
+        {
+          type = "wm";
+          key = " WM";
+          color = "pink";
+        }
+        {
+          type = "terminal";
+          key = " Terminal";
+          color = "lavender";
+        }
+
+        "break"
+
+        {
+          type = "cpu";
+          key = " CPU";
+          color = "red";
+        }
+        {
+          type = "gpu";
+          key = "󰢮 GPU";
+          color = "peach";
+        }
+        {
+          type = "memory";
+          key = "󰍛 Memory";
+          color = "green";
+        }
+
+        "break"
+
+        {
+          type = "disk";
+          key = "󰋊 Disk";
+          color = "blue";
+        }
       ];
     };
   };
