@@ -7,15 +7,13 @@
 
     settings = {
       logo = {
-        type = "image";
-        source = "${config.home.homeDirectory}/.config/fastfetch/nixos.png";
+        type = "file";
+        source = "${config.home.homeDirectory}/.config/fastfetch/nixos.webp";
 
         width = 28;
-        height = 28;
 
-        padding = {
-          top = 1;
-          left = 2;
+        image = {
+          type = "kitty";
         };
       };
 
@@ -28,7 +26,7 @@
         {
           type = "title";
           format = "{user}@{host}";
-          color = "mauve";
+          color = "magenta";
         }
 
         "separator"
@@ -59,7 +57,7 @@
         {
           type = "shell";
           key = " Shell";
-          color = "mauve";
+          color = "magenta";
         }
         {
           type = "wm";
@@ -69,7 +67,7 @@
         {
           type = "terminal";
           key = " Terminal";
-          color = "lavender";
+          color = "blue";
         }
 
         "break"
@@ -82,7 +80,7 @@
         {
           type = "gpu";
           key = "󰢮 GPU";
-          color = "peach";
+          color = "pink";
         }
         {
           type = "memory";
@@ -101,5 +99,5 @@
     };
   };
 
-  xdg.configFile."fastfetch/nixos.png".source = ./assets/nixos.png;
+  xdg.configFile."fastfetch/nixos.webp".source = ./assets/nixos.webp;
 }
