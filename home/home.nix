@@ -17,6 +17,7 @@
     zoxide
     fzf
     lazygit
+    nodejs
   ];
 
   home.username = "natinix";
