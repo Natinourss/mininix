@@ -7,7 +7,12 @@
 
     settings = {
       logo = {
-        source = "nixos";
+        type = "image";
+        source = "${config.home.homeDirectory}/.config/fastfetch/nixos.png";
+
+        width = 28;
+        height = 28;
+
         padding = {
           top = 1;
           left = 2;
@@ -22,8 +27,10 @@
       modules = [
         {
           type = "title";
+          format = "{user}@{host}";
           color = "mauve";
         }
+
         "separator"
 
         {
@@ -93,4 +100,6 @@
       ];
     };
   };
+
+  xdg.configFile."fastfetch/nixos.png".source = ./assets/nixos.png;
 }
