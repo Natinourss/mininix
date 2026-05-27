@@ -18,6 +18,9 @@
     fzf
     lazygit
     nodejs
+    btop
+    htop
+    fastfetch
   ];
 
   home.username = "natinix";
