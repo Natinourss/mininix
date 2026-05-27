@@ -140,17 +140,6 @@
           ui = {
             enable = true;
           };
-
-          mappings = {
-            gf = {
-              action = "gf_passthrough";
-              opts = {
-                noremap = false;
-                expr = true;
-                buffer = true;
-              };
-            };
-          };
         };
       };
     };
