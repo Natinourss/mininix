@@ -7,6 +7,8 @@
     ./programs/zsh.nix
     ./programs/kitty.nix
     ./programs/starship.nix
+    ./programs/btop.nix
+    ./programs/fastfetch.nix
 
     inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix
@@ -18,9 +20,7 @@
     fzf
     lazygit
     nodejs
-    btop
     htop
-    fastfetch
   ];
 
   home.username = "natinix";
