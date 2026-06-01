@@ -3,16 +3,30 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # utils
     wget
     git
     tldr
     tree
-    cmatrix
-    cbonsai
     file
     ffmpeg
     imagemagick
     pciutils
     mesa-demos
+
+    # fun
+    cmatrix
+    cbonsai
+
+    # apps
+    discord
+    brave
+    libreoffice
+
+    # pentest
+    nmap
+    john
+    hydra
+    netcat
   ];
 }
