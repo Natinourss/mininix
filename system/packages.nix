@@ -12,5 +12,7 @@
     file
     ffmpeg
     imagemagick
+    pciutils
+    mesa-demos
   ];
 }

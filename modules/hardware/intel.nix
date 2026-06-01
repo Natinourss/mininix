@@ -2,18 +2,13 @@
 { config, pkgs, ... }:
 
 {
-  # Intel GPU
   services.xserver.videoDrivers = [ "intel" ];
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+  hardware.graphics.enable = true;
 
   environment.systemPackages = with pkgs; [
     intel-media-driver
-    vaapiIntel
+    intel-vaapi-driver
     vulkan-tools
   ];
 

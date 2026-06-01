@@ -2,16 +2,10 @@
 { config, pkgs, ... }:
 
 {
-  # AMD GPU (Mesa / RADV)
   services.xserver.videoDrivers = [ "amdgpu" ];
 
-  hardware.opengl = {
-    enable = true;
-    driSupport = true;
-    driSupport32Bit = true;
-  };
+  hardware.graphics.enable = true;
 
-  # Vulkan (important pour gaming)
   environment.systemPackages = with pkgs; [
     vulkan-tools
     mesa
