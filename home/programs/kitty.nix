@@ -15,6 +15,7 @@
 
       # transparence
       background_opacity = "0.85";
+      dynamic_background_opacity = true;
 
       # padding (important pour le style)
       window_padding_width = 10;

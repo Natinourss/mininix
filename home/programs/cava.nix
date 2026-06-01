@@ -21,6 +21,7 @@
     channels = stereo
     mono_option = average
     reverse = 0
+    background = none
 
     [color]
     gradient = 1
