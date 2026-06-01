@@ -15,4 +15,11 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
+
+  programs.wireshark.enable = true;
+
+  users.users.natinix.extraGroups = [ "libvirtd" "wireshark" ];
 }

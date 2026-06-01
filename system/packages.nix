@@ -28,5 +28,9 @@
     john
     hydra
     netcat
+
+    # virtualisation
+    qemu
+    virt-manager
   ];
 }
