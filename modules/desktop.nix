@@ -2,6 +2,8 @@
 { ... }:
 
 {
+  programs.steam.enable = true; #Steam 
+
   services.xserver.enable = true;
 
   services.displayManager.gdm.enable = true;
