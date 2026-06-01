@@ -22,7 +22,6 @@
     fzf
     lazygit
     nodejs
-    htop
   ];
 
   home.username = "natinix";
