@@ -9,6 +9,8 @@
     ./programs/starship.nix
     ./programs/btop.nix
     ./programs/fastfetch.nix
+    ./programs/cava.nix
+    ./programs/pipes.nix
 
     inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix
