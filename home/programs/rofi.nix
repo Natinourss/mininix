@@ -1,29 +1,28 @@
 # rofi.nix
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
   programs.rofi = {
     enable = true;
+    package = pkgs.rofi-wayland;
 
-    theme = "custom";
+    theme = "~/.config/rofi/themes/custom.rasi";
 
     extraConfig = {
       modi = "drun";
       show-icons = true;
-      icon-theme = "Colloid-Dark";
-      display-drun = "Apps";
-      drun-display-format = "{icon}  {name}";
+      drun-display-format = "{icon} {name}";
+      icon-theme = "Papirus";
     };
   };
 
   xdg.configFile."rofi/themes/custom.rasi".text = ''
     * {
-      bg: rgba(30, 30, 46, 0.85);
-      bg-alt: rgba(49, 50, 68, 0.85);
+      bg: #1e1e2ecc;
+      bg-alt: #313244cc;
       fg: #cdd6f4;
-      accent: #cba6f7;
+      accent: #89b4fa;
 
-      border-radius: 12px;
       font: "JetBrainsMono Nerd Font 11";
     }
 
@@ -33,36 +32,28 @@
       width: 500px;
 
       background-color: @bg;
-      border: 2px;
-      border-color: @accent;
-      border-radius: 12px;
-      padding: 15px;
+      border-radius: 16px;
+      padding: 20px;
     }
 
     mainbox {
-      spacing: 10px;
+      spacing: 12px;
     }
 
     inputbar {
       background-color: @bg-alt;
-      border-radius: 8px;
-      padding: 10px;
-    }
-
-    entry {
-      placeholder: "Search...";
-      text-color: @fg;
+      border-radius: 10px;
+      padding: 12px;
     }
 
     listview {
-      spacing: 6px;
+      spacing: 8px;
       scrollbar: false;
     }
 
     element {
-      padding: 8px;
-      border-radius: 8px;
-      text-color: @fg;
+      padding: 10px;
+      border-radius: 10px;
     }
 
     element selected {
@@ -71,8 +62,8 @@
     }
 
     element-icon {
-      size: 24px;
-      margin: 0 10px 0 0;
+      size: 28px;
+      margin: 0 12px 0 0;
     }
   '';
 }

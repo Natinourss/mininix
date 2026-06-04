@@ -31,7 +31,7 @@
       bind = [
         # --- Apps ---
         "$mainMod, RETURN, exec, kitty"
-        "$mainMod, D, exec, wofi --show drun"
+        "$mainMod, D, exec, rofi -show drun -show-icons"
         "$mainMod, E, exec, thunar"
         "$mainMod, O, exec, obsidian"
         "$mainMod, B, exec, brave"

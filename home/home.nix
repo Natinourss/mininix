@@ -13,6 +13,7 @@
     ./programs/pipes.nix
     ./programs/thunar.nix
     ./programs/gtk.nix
+    ./programs/rofi.nix
 
     inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix
