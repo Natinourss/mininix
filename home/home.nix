@@ -14,7 +14,7 @@
     ./programs/thunar.nix
     ./programs/gtk.nix
     ./programs/wofi.nix
-    ./programs/swww.nix
+    ./programs/awww.nix
 
     inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix

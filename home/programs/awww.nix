@@ -3,6 +3,6 @@
 
 {
   home.packages = with pkgs; [
-    swww  # Animated wallpaper daemon for Wayland
+    awww  # Animated wallpaper daemon for Wayland
   ];
 }

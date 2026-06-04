@@ -33,8 +33,8 @@
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Bibata-Modern-Classic 24"
-        "swww init"
-        "swww img ~/mininix/wallpapers/Minimal_Squares.png"
+        "awww init"
+        "awww img ~/mininix/wallpapers/Minimal_Squares.png"
       ];
 
       bind = [
