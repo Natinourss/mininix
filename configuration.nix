@@ -6,6 +6,7 @@
     ./hardware-configuration.nix
 
     ./modules/boot.nix
+    ./modules/sddm.nix
     ./modules/networking.nix
     ./modules/locale.nix
     #./modules/desktop.nix # For gnome setup
