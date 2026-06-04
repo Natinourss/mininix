@@ -90,6 +90,9 @@
         "opacity 0.90 0.90,class:^(Thunar)$"
       ];
 
+
+
+
       general = {
         gaps_in = 5;
         gaps_out = 10;

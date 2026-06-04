@@ -11,6 +11,8 @@
     ./programs/fastfetch.nix
     ./programs/cava.nix
     ./programs/pipes.nix
+    ./programs/thunar.nix
+    ./programs/gtk.nix
 
     inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix
@@ -28,6 +30,14 @@
     # hyprland tools
     waybar
     rofi
+
+    wofi
+    thunar
+    obsidian
+    hyprlock
+    wlogout
+    wl-clipboard
+    cliphist
   ];
 
   home.username = "natinix";
