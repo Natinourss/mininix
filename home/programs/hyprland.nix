@@ -20,12 +20,19 @@
         "QT_STYLE_OVERRIDE,Adwaita-dark"
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
+
+        "XCURSOR_THEME,Bibata-Modern-Classic"
+        "XCURSOR_SIZE,24"
+
+        "HYPRCURSOR_THEME,Bibata-Modern-Classic"
+        "HYPRCURSOR_SIZE,24"
       ];
 
       exec-once = [
         "waybar"
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
+        "hyprctl setcursor Bibata-Modern-Classic 24"
       ];
 
       bind = [
