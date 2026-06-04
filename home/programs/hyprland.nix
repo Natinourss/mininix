@@ -7,16 +7,29 @@
 
     configType = "hyprlang";
 
+    # IMPORTANT → évite les configs parasites
+    extraConfig = "";
+
     settings = {
       "$mainMod" = "SUPER";
+
+      monitor = ",preferred,auto,1";
+
+      env = [
+        "GTK_THEME,Adwaita:dark"
+        "QT_STYLE_OVERRIDE,Adwaita-dark"
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+      ];
 
       exec-once = [
         "waybar"
         "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ];
 
       bind = [
-        # -- App Launchers --
+        # --- Apps ---
         "$mainMod, RETURN, exec, kitty"
         "$mainMod, D, exec, wofi --show drun"
         "$mainMod, E, exec, thunar"
@@ -25,19 +38,19 @@
         "$mainMod, L, exec, hyprlock"
         "$mainMod, X, exec, wlogout"
 
-        # -- Screenshots --
+        # --- Screenshots ---
         ", Print, exec, grimblast copy output"
         "SHIFT, Print, exec, grimblast copy area"
 
-        # -- Window Management --
+        # --- Window ---
         "$mainMod, Q, killactive"
         "$mainMod, M, exit"
         "$mainMod, F, fullscreen"
         "$mainMod, SPACE, togglefloating"
         "$mainMod, P, pseudo"
-        "$mainMod SHIFT, P, togglesplit"
+        "$mainMod SHIFT, P, layoutmsg, togglesplit"
 
-        # -- Focus --
+        # --- Focus ---
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
@@ -48,16 +61,16 @@
         "$mainMod SHIFT, up, movewindow, u"
         "$mainMod SHIFT, down, movewindow, d"
 
-        # -- Resize --
+        # --- Resize ---
         "$mainMod CTRL, left, resizeactive, -20 0"
         "$mainMod CTRL, right, resizeactive, 20 0"
         "$mainMod CTRL, up, resizeactive, 0 -20"
         "$mainMod CTRL, down, resizeactive, 0 20"
 
-        # -- Clipboard --
+        # --- Clipboard ---
         "$mainMod, V, exec, cliphist list | wofi --dmenu | cliphist decode | wl-copy"
 
-        # -- Workspaces --
+        # --- Workspaces ---
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
@@ -81,24 +94,46 @@
         "$mainMod SHIFT, 0, movetoworkspace, 10"
       ];
 
-      layerrule = [
-        "blur, waybar"
-        "blur, wofi"
-      ];
-
-      windowrulev2 = [
-        "opacity 0.90 0.90,class:^(Thunar)$"
-      ];
-
       general = {
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
+        allow_tearing = true;
       };
 
       decoration = {
-        rounding = 8;
+        rounding = 10;
+
+        blur = {
+          enabled = true;
+          size = 5;
+          passes = 2;
+        };
       };
+
+      animations = {
+        enabled = true;
+
+        bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+
+        animation = [
+          "windows, 1, 7, myBezier"
+          "windowsOut, 1, 7, default, popin 80%"
+          "border, 1, 10, default"
+          "fade, 1, 7, default"
+          "workspaces, 1, 6, default"
+        ];
+      };
+
+      windowrule = [
+        "workspace 2,class:^(brave-browser)$"
+        "workspace 1,class:^(Godot)$"
+        "workspace 1,class:^(godot)$"
+        "tile,class:^(Godot)$"
+        "tile,class:^(godot)$"
+        "opacity 0.9 override 0.9 override,class:^(Thunar)$"
+      ];
     };
   };
 }
+
