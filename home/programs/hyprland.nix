@@ -33,8 +33,10 @@
         "wl-paste --type text --watch cliphist store"
         "wl-paste --type image --watch cliphist store"
         "hyprctl setcursor Bibata-Modern-Classic 24"
-        "awww init"
-        "awww img ~/mininix/wallpapers/Minimal_Squares.png"
+        "awww-daemon"
+        "awww img /home/natinix/mininix/wallpapers/Minimal_Squares.png" #wallpaper fix
+        #"awww img $(find /home/natinix/mininix/wallpapers -type f | shuf -n 1)" #random wallpaper
+        #"sleep 0.5 && awww img $(find /home/natinix/mininix/wallpapers -type f | shuf -n 1)" #reload random wallpaper
       ];
 
       bind = [
