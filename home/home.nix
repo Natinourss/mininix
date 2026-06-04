@@ -14,6 +14,8 @@
 
     inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix
+
+    ./programs/hyprland.nix
   ];
 
   home.packages = with pkgs; [
@@ -25,7 +27,7 @@
 
     # hyprland tools
     waybar
-    rofi-wayland
+    rofi
   ];
 
   home.username = "natinix";

@@ -10,7 +10,6 @@
     grim
     slurp
     dunst
-    rofi-wayland
-    kitty
+    rofi
   ];
 }
