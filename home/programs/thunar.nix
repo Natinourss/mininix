@@ -4,8 +4,8 @@
 {
   home.packages = with pkgs; [
     thunar
-    xfce.thunar-archive-plugin
-    xfce.thunar-volman
+    thunar-archive-plugin
+    thunar-volman
     file-roller
   ];
 }

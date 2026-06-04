@@ -11,7 +11,7 @@
     enable = true;
     device = "nodev"; # UEFI
     efiSupport = true;
-    useOSProber = true;
+    useOSProber = false;
     default = 0;
     configurationLimit = 30;
   };
