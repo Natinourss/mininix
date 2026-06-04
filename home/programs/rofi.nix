@@ -5,18 +5,21 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi;
-
-    theme = "~/.config/rofi/themes/custom.rasi";
-
-    extraConfig = {
-      modi = "drun";
-      show-icons = true;
-      drun-display-format = "{icon} {name}";
-      icon-theme = "Papirus";
-    };
   };
 
-  xdg.configFile."rofi/themes/custom.rasi".text = ''
+  xdg.configFile."rofi/config.rasi".text = ''
+    configuration {
+      modi: "drun";
+      show-icons: true;
+      drun-display-format: "{icon} {name}";
+      icon-theme: "Papirus";
+    }
+
+    @theme "custom"
+  '';
+
+
+  xdg.configFile."rofi/custom.rasi".text = ''
     * {
       bg: #1e1e2ecc;
       bg-alt: #313244cc;

@@ -7,7 +7,7 @@
 
     configType = "hyprlang";
 
-    # IMPORTANT → évite les configs parasites
+    # évite les configs parasites
     extraConfig = "";
 
     settings = {
@@ -31,7 +31,7 @@
       bind = [
         # --- Apps ---
         "$mainMod, RETURN, exec, kitty"
-        "$mainMod, D, exec, rofi -show drun -show-icons"
+        "$mainMod, D, exec, wofi --show drun"
         "$mainMod, E, exec, thunar"
         "$mainMod, O, exec, obsidian"
         "$mainMod, B, exec, brave"
@@ -99,15 +99,25 @@
         gaps_out = 10;
         border_size = 2;
         allow_tearing = true;
+        col.active_border = "rgba(cba6f7ff)";
+        col.inactive_border = "rgba(313244aa)";
+
       };
 
       decoration = {
         rounding = 10;
 
+        drop_shadow = true;
+        shadow_range = 20;
+        shadow_render_power = 3;
+        col.shadow = "rgba(cba6f755)";
+
+
         blur = {
           enabled = true;
-          size = 5;
+          size = 6;
           passes = 2;
+          ignore_opacity = true;
         };
       };
 
