@@ -22,6 +22,10 @@
     fzf
     lazygit
     nodejs
+
+    # hyprland tools
+    waybar
+    rofi-wayland
   ];
 
   home.username = "natinix";

@@ -8,7 +8,8 @@
     ./modules/boot.nix
     ./modules/networking.nix
     ./modules/locale.nix
-    ./modules/desktop.nix
+    #./modules/desktop.nix # For gnome setup
+    ./modules/desktop/hyprland.nix # For Hyprland setup
     ./modules/audio.nix
     ./modules/users.nix
     ./modules/services.nix
