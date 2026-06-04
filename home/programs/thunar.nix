@@ -8,8 +8,4 @@
     xfce.thunar-volman
     file-roller
   ];
-
-  programs.thunar = {
-    enable = true;
-  };
 }
