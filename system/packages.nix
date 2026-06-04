@@ -13,6 +13,7 @@
     imagemagick
     pciutils
     mesa-demos
+    catppuccin-sddm
 
     # fun
     cmatrix
