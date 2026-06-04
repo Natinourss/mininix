@@ -99,25 +99,26 @@
         gaps_out = 10;
         border_size = 2;
         allow_tearing = true;
-        col.active_border = "rgba(cba6f7ff)";
-        col.inactive_border = "rgba(313244aa)";
-
+        
+        "col.active_border" = "rgba(cba6f7ff)";
+        "col.inactive_border" = "rgba(313244aa)";
       };
 
       decoration = {
         rounding = 10;
-
-        drop_shadow = true;
-        shadow_range = 20;
-        shadow_render_power = 3;
-        col.shadow = "rgba(cba6f755)";
-
 
         blur = {
           enabled = true;
           size = 6;
           passes = 2;
           ignore_opacity = true;
+        };
+
+        shadow = {
+          enabled = true;
+          range = 20;
+          render_power = 3;
+          color = "rgba(cba6f755)";
         };
       };
 
