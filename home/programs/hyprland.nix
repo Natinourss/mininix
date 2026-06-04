@@ -126,12 +126,6 @@
       };
 
       windowrule = [
-        "workspace 2,class:^(brave-browser)$"
-        "workspace 1,class:^(Godot)$"
-        "workspace 1,class:^(godot)$"
-        "tile,class:^(Godot)$"
-        "tile,class:^(godot)$"
-        "opacity 0.9 override 0.9 override,class:^(Thunar)$"
       ];
     };
   };

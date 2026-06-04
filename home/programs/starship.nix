@@ -11,18 +11,18 @@
       format = "$directory$git_branch$git_status$nix_shell$character";
 
       character = {
-        success_symbol = "[❯](bold green)";
-        error_symbol = "[❯](bold red)";
+        success_symbol = "[❯](bold #a6e3a1)";
+        error_symbol = "[❯](bold #f38ba8)";
       };
 
       directory = {
-        style = "bold lavender";
+        style = "bold #b4befe"; # lavender
         truncation_length = 2;
       };
 
       git_branch = {
         symbol = " ";
-        style = "bold mauve";
+        style = "bold #cba6f7"; # mauve
         format = "([$symbol$branch]($style) )";
       };
 

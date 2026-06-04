@@ -43,10 +43,10 @@
   home.username = "natinix";
   home.homeDirectory = "/home/natinix";
 
-  catppuccin = {
-    enable = true;
-    flavor = "mocha";
-  };
+  #catppuccin = {
+    #enable = true;
+    #flavor = "mocha";
+  #};
 
   programs.zoxide.enable = true;
   programs.fzf.enable = true;

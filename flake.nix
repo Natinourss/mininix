@@ -63,7 +63,7 @@
          home-manager.users.natinix = {
            imports = [
              ./home/home.nix
-             catppuccin.homeModules.default
+             #catppuccin.homeModules.default
             ];
           };
         }
