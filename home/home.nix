@@ -15,6 +15,7 @@
     ./programs/gtk.nix
     ./programs/wofi.nix
     ./programs/awww.nix
+    ./programs/waybar.nix
 
     inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix
