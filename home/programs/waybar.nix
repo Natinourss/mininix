@@ -93,15 +93,16 @@
     style = ''
       * {
         font-family: "JetBrainsMono Nerd Font", sans-serif;
-        font-size: 13px;
+        font-size: 12px;
         border: none;
       }
 
       window#waybar {
+        min-height: 28px;
         background: rgba(30, 30, 46, 0.5);
-        border-radius: 14px;
-        margin: 8px 16px;
-        padding: 4px 6px;
+        border-radius: 12px;
+        margin: 6px 12px;
+        padding: 2px 6px;
       }
 
       #workspaces {
@@ -111,7 +112,7 @@
       }
 
       #workspaces button {
-        padding: 4px 10px;
+        padding: 2px 6px;
         margin: 2px;
         color: @subtext0;
         border-radius: 8px;
@@ -128,9 +129,9 @@
 
       #cpu, #memory, #network, #clock, #pulseaudio, #mpris, #tray {
         background: rgba(49, 50, 68, 0.6);
-        padding: 4px 12px;
-        margin: 2px 4px;
-        border-radius: 10px;
+        padding: 0px 8px;
+        margin: 2px 3px;
+        border-radius: 8px;
       }
 
       #window {
