@@ -104,9 +104,9 @@
       ];
 
       general = {
-        gaps_in = 5;
-        gaps_out = 10;
-        border_size = 2;
+        gaps_in = 2.5;
+        gaps_out = 5;
+        border_size = 1;
         allow_tearing = true;
         
         "col.active_border" = "rgba(cba6f7ff)";
@@ -114,7 +114,7 @@
       };
 
       decoration = {
-        rounding = 10;
+        rounding = 5;
 
         blur = {
           enabled = true;
@@ -125,8 +125,8 @@
 
         shadow = {
           enabled = true;
-          range = 20;
-          render_power = 3;
+          range = 3;
+          render_power = 2;
           color = "rgba(cba6f755)";
         };
       };
