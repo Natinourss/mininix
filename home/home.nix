@@ -16,6 +16,7 @@
     ./programs/wofi.nix
     ./programs/awww.nix
     ./programs/waybar.nix
+    ./programs/kanshi.nix
 
     inputs.nixvim.homeModules.nixvim
     ./programs/nixvim.nix

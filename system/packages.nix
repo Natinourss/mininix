@@ -14,6 +14,7 @@
     pciutils
     mesa-demos
     catppuccin-sddm
+    nwg-displays
 
     # fun
     cmatrix
@@ -29,6 +30,7 @@
     john
     hydra
     netcat
+    wireshark
 
     # virtualisation
     qemu
