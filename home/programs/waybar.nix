@@ -5,64 +5,139 @@
   programs.waybar = {
     enable = true;
 
+    settings = {
+      mainBar = {
+        layer = "top";
+        position = "top";
+        height = 36;
+        spacing = 4;
+        reload_style_on_change = true;
+
+        modules-left = [ "hyprland/workspaces" "mpris" ];
+        modules-center = [ "hyprland/window" ];
+        modules-right = [
+          "pulseaudio"
+          "network"
+          "cpu"
+          "memory"
+          "clock"
+          "tray"
+        ];
+
+        # ===== WORKSPACES =====
+        "hyprland/workspaces" = {
+          format = "{id}";
+          sort-by-number = true;
+        };
+
+        # ===== WINDOW =====
+        "hyprland/window" = {
+          format = "{}";
+          max-length = 50;
+        };
+
+        # ===== MUSIC =====
+        mpris = {
+          format = "{player_icon}";
+          format-paused = "";
+          player-icons = {
+            default = "🎵";
+          };
+          on-click = "playerctl play-pause";
+        };
+
+        # ===== AUDIO =====
+        pulseaudio = {
+          format = "{volume}%";
+          format-muted = "muted";
+          on-click = "pwvucontrol";
+        };
+
+        # ===== NETWORK =====
+        network = {
+          format-wifi = "wifi";
+          format-ethernet = "eth";
+          format-disconnected = "off";
+          tooltip = false;
+        };
+
+        # ===== CPU =====
+        cpu = {
+          format = "cpu {usage}%";
+          interval = 5;
+          on-click = "kitty -e btop";
+        };
+
+        # ===== RAM =====
+        memory = {
+          format = "ram {used}%";
+          interval = 10;
+          on-click = "kitty -e btop";
+        };
+
+        # ===== CLOCK =====
+        clock = {
+          format = "{:%H:%M}";
+          format-alt = "{:%d/%m/%Y}";
+          tooltip = false;
+        };
+
+        # ===== TRAY =====
+        tray = {
+          spacing = 8;
+        };
+      };
+    };
+
+    # ===== STYLE =====
     style = ''
       * {
-        font-family: JetBrainsMono Nerd Font;
+        font-family: "JetBrainsMono Nerd Font", sans-serif;
         font-size: 13px;
         border: none;
       }
 
       window#waybar {
-        background: rgba(30, 30, 46, 0.6); /* transparent catppuccin */
-        color: #cdd6f4;
-        border-radius: 12px;
+        background: rgba(30, 30, 46, 0.5);
+        border-radius: 14px;
+        margin: 8px 16px;
+        padding: 4px 6px;
+      }
+
+      #workspaces {
+        background: rgba(49, 50, 68, 0.6);
+        border-radius: 10px;
+        padding: 2px 4px;
       }
 
       #workspaces button {
-        padding: 0 8px;
-        color: #6c7086;
+        padding: 4px 10px;
+        margin: 2px;
+        color: @subtext0;
+        border-radius: 8px;
       }
 
       #workspaces button.active {
-        color: #cba6f7;
+        background: @mauve;
+        color: @base;
       }
 
       #workspaces button:hover {
-        color: #f5e0dc;
+        background: @surface1;
       }
 
-      #clock, #cpu, #memory {
-        padding: 0 10px;
+      #cpu, #memory, #network, #clock, #pulseaudio, #mpris, #tray {
+        background: rgba(49, 50, 68, 0.6);
+        padding: 4px 12px;
+        margin: 2px 4px;
+        border-radius: 10px;
+      }
+
+      #window {
+        color: @subtext1;
+        font-style: italic;
       }
     '';
-
-    settings = [
-      {
-        layer = "top";
-        position = "top";
-
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ "clock" ];
-        modules-right = [ "cpu" "memory" ];
-
-        "hyprland/workspaces" = {
-          format = "{name}";
-        };
-
-        clock = {
-          format = "  {:%H:%M}   {:%d/%m}";
-          tooltip = false;
-        };
-
-        cpu = {
-          format = " {usage}%";
-        };
-
-        memory = {
-          format = " {used}%";
-        };
-      }
-    ];
   };
 }
 

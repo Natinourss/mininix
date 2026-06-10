@@ -29,6 +29,9 @@
     fzf
     lazygit
     nodejs
+    playerctl
+    pwvucontrol
+    lm_sensors
 
     # hyprland tools
     waybar
