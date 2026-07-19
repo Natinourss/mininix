@@ -15,6 +15,10 @@
     settings = {
       "$mainMod" = "SUPER";
 
+    input = {
+      kb_layout = "fr";
+    };
+
       env = [
         "GTK_THEME,Adwaita:dark"
         "QT_STYLE_OVERRIDE,Adwaita-dark"
