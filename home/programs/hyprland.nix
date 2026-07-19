@@ -7,8 +7,10 @@
 
     configType = "hyprlang";
 
-    # évite les configs parasites
-    extraConfig = "";
+    # nwg-display
+    extraConfig = ''
+      source = ~/.config/hypr/monitors.conf
+    '';
 
     settings = {
       "$mainMod" = "SUPER";
