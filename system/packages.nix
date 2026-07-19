@@ -15,6 +15,8 @@
     mesa-demos
     catppuccin-sddm
     nwg-displays
+    networkmanagerapplet
+    networkmanager_dmenu
 
     # fun
     cmatrix

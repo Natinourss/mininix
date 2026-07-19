@@ -37,6 +37,7 @@
         "awww img /home/natinix/mininix/wallpapers/Minimal_Squares.png" #wallpaper fix
         #"awww img $(find /home/natinix/mininix/wallpapers -type f | shuf -n 1)" #random wallpaper
         #"sleep 0.5 && awww img $(find /home/natinix/mininix/wallpapers -type f | shuf -n 1)" #reload random wallpaper
+        "nm-applet"
       ];
 
       bind = [

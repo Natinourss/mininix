@@ -17,11 +17,11 @@
         modules-center = [ "hyprland/window" ];
         modules-right = [
           "pulseaudio"
+          "tray"
           "network"
           "cpu"
           "memory"
           "clock"
-          "tray"
         ];
 
         # ===== WORKSPACES =====
@@ -53,12 +53,19 @@
           on-click = "pwvucontrol";
         };
 
+        # ===== TRAY =====
+        tray = {
+          spacing = 8;
+        };
+
         # ===== NETWORK =====
         network = {
-          format-wifi = "wifi";
-          format-ethernet = "eth";
-          format-disconnected = "off";
-          tooltip = false;
+          format-wifi = "  {essid}";
+          format-ethernet = "󰈀  {ipaddr}";
+          format-disconnected = "⚠️  Disconnected";
+          tooltip = true;
+
+          on-click = "nm-applet";
         };
 
         # ===== CPU =====
@@ -80,11 +87,6 @@
           format = "{:%H:%M}";
           format-alt = "{:%d/%m/%Y}";
           tooltip = false;
-        };
-
-        # ===== TRAY =====
-        tray = {
-          spacing = 8;
         };
       };
     };
