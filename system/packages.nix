@@ -26,6 +26,7 @@
     discord
     brave
     libreoffice
+    steam
 
     # pentest
     nmap
